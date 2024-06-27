@@ -2,22 +2,80 @@
 <html>
   <head>
     <title>Amazon Price Tracker</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        padding: 10px;
-      }
-      #status {
-        margin-top: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="bulma.min.css" />
   </head>
   <body>
-    <h1>Amazon Price Tracker</h1>
-    <label for="productUrl">Product URL:</label>
-    <input type="text" id="productUrl" />
-    <button id="track-price">Track Price</button>
-    <div id="status"></div>
+    <div class="container panel is-success m-0 is-rounded is-clipped">
+      <p class="panel-heading is-center">Amazon Price Tracker</p>
+      <p class="panel-tabs">
+        <a class="is-active panel-tag" id="dashboard-tag">Dashboard</a>
+        <a class="panel-tag" id="add-tag">Add</a>
+        <a class="panel-tag" id="history-tag">History</a>
+      </p>
+      <div class="p-5">
+        <div
+          class="panel-block is-active is-flex-direction-column is-align-items-stretch p-0"
+          id="dashboard-panel"
+        >
+          <div class="field">
+            <label class="label">Name of product</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Text input"
+                id="track-product-name"
+              />
+            </div>
+            <p
+              class="help has-text-danger is-hidden"
+              id="track-product-name-error"
+            >
+              This is a help text
+            </p>
+          </div>
+
+          <div class="field">
+            <label class="label">Product link</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Text input"
+                id="track-product-url"
+              />
+            </div>
+            <p
+              class="help has-text-danger is-hidden"
+              id="track-product-url-error"
+            >
+              This is a help text
+            </p>
+          </div>
+
+          <input
+            class="button is-primary"
+            type="submit"
+            value="Submit input"
+            id="track-price"
+          />
+          <div id="status"></div>
+        </div>
+        <div
+          class="panel-block is-active is-flex-direction-column is-align-items-stretch p-0 is-hidden"
+          id="add-panel"
+        >
+          <h1>Add panel</h1>
+        </div>
+        <div
+          class="panel-block is-active is-flex-direction-column is-align-items-stretch p-0 is-hidden"
+          id="istory-panel"
+        >
+          <h1>History panel</h1>
+        </div>
+      </div>
+    </div>
+
     <script src="popup.js"></script>
   </body>
 </html>

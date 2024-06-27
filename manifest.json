@@ -11,8 +11,7 @@
     "scripting",
     "alarms",
     "webRequest",
-    "offscreen",
-    "<all_urls>"
+    "offscreen"
   ],
   "background": {
     "service_worker": "background.js"
