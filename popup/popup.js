@@ -76,7 +76,7 @@ trackPrice.addEventListener("click", () => {
 
   const productUrl = trackProductUrl?.value;
   const isValid = isValidAmazonUrl(productUrl);
-  console.log("isValidAmazonUrl ", isValid);
+  console.log("isValid ", isValid);
   if (!isValid) {
     trackProductUrlError.innerText =
       "Please enter a valid Amazon URL. Eg:- https://www.amazon.in/*";
